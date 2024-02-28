@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Password generator">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Password Generator</h1>
+
+    <main class="input">
+        <div class="subtitle">
+            <span>
+                Password size: </span id="sliderValue"></span> caracters
+            </span>
+        </div>
+
+        <input id="slider" type="range" min="5" max="30" value="10">
+
+        <button id="button" class="buttonGeneratePassword" onclick="generatePassword()">Generate Password</button>
+    </main>
+
+    <div id="showPassword" class="showPassword hide">
+        <span class="passwordLabel">Your generated password is:</span>
+        <div class="copyPassword" onclick="copyPassword()">
+            <span id="password" class="password"></span>
+            <span id="message">Click in the code to copy password</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
